@@ -12,6 +12,7 @@ import {
 import { FaEarlybirds, FaTwitter } from "react-icons/fa";
 import { NextSeo } from "next-seo";
 import gappe from "assets/gappe.png";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -91,22 +92,25 @@ export default function Home() {
             Twitter
           </Button>
 
-          <Button
-            variant="contained"
-            disableElevation
-            sx={{
-              mt: 8,
-              textTransform: "none",
-              fontWeight: 700,
-              width: {
-                xs: "100%",
-                sm: "auto",
-              },
-            }}
-          >
-            <Box component={FaEarlybirds} sx={{ mr: 1 }} />
-            Get Early Access
-          </Button>
+          <Link href="/early-access" passHref>
+            <Button
+              component="a"
+              variant="contained"
+              disableElevation
+              sx={{
+                mt: 8,
+                textTransform: "none",
+                fontWeight: 700,
+                width: {
+                  xs: "100%",
+                  sm: "auto",
+                },
+              }}
+            >
+              <Box component={FaEarlybirds} sx={{ mr: 1 }} />
+              Get Early Access
+            </Button>
+          </Link>
         </Stack>
       </Stack>
     </Container>
