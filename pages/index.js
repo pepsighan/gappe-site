@@ -7,7 +7,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { FaTwitter } from "react-icons/fa";
+import { FaTwitter, FaEarlybirds } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -51,7 +51,7 @@ export default function Home() {
             href="https://twitter.com/gappe_app"
             target="_blank"
             rel="noopener noreferrer"
-            sx={{ textTransform: "none" }}
+            sx={{ textTransform: "none", fontWeight: 700 }}
           >
             <Box component={FaTwitter} sx={{ mr: 1 }} /> Follow Progress on
             Twitter
@@ -60,8 +60,9 @@ export default function Home() {
           <Button
             variant="contained"
             disableElevation
-            sx={{ mt: 8, textTransform: "none" }}
+            sx={{ mt: 8, textTransform: "none", fontWeight: 700 }}
           >
+            <Box component={FaEarlybirds} sx={{ mr: 1 }} />
             Get Early Access
           </Button>
         </Stack>
