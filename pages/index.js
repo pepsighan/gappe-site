@@ -28,19 +28,19 @@ export default function Home() {
         </Typography>
 
         <Stack direction="row" spacing={2} sx={{ mt: 2 }}>
-          <Chip label="Built on Solana" variant="outlined" color="primary" />
+          <Chip label="Built on Solana" variant="outlined" color="default" />
           <Chip
             label="End-to-end Encrypted"
             variant="outlined"
-            color="primary"
+            color="default"
           />
-          <Chip label="Decentralized" variant="outlined" color="primary" />
+          <Chip label="Decentralized" variant="outlined" color="default" />
           <Chip
             label="Censor-ship Resistant"
             variant="outlined"
-            color="primary"
+            color="default"
           />
-          <Chip label="Emoji NFT" variant="outlined" color="primary" />
+          <Chip label="Emoji NFT" variant="outlined" color="default" />
         </Stack>
 
         <Stack direction="row" alignItems="center" spacing={2} sx={{ mt: 8 }}>
