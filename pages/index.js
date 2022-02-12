@@ -3,11 +3,11 @@ import {
   Box,
   Button,
   Chip,
-  darken,
   GlobalStyles,
   Stack,
   Typography,
 } from "@mui/material";
+import { FaTwitter } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -45,11 +45,16 @@ export default function Home() {
 
         <Stack direction="row" alignItems="center" spacing={2} sx={{ mt: 8 }}>
           <Button
+            component="a"
             variant="outlined"
             disableElevation
+            href="https://twitter.com/gappe_app"
+            target="_blank"
+            rel="noopener noreferrer"
             sx={{ textTransform: "none" }}
           >
-            Follow Progress on Twitter
+            <Box component={FaTwitter} sx={{ mr: 1 }} /> Follow Progress on
+            Twitter
           </Button>
 
           <Button
