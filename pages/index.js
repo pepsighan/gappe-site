@@ -3,15 +3,17 @@ import {
   Box,
   Button,
   Chip,
+  Container,
   GlobalStyles,
+  Grid,
   Stack,
   Typography,
 } from "@mui/material";
-import { FaTwitter, FaEarlybirds } from "react-icons/fa";
+import { FaEarlybirds, FaTwitter } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <>
+    <Container>
       <GlobalStyles
         styles={`
           body {
@@ -19,31 +21,46 @@ export default function Home() {
           }
         `}
       />
-      <Stack alignItems="center" sx={{ mt: 4 }}>
-        <Box sx={{ width: 400, ml: -5 }}>
+      <Stack alignItems="center" sx={{ mt: { md: 4 } }}>
+        <Box sx={{ width: 400, ml: { md: -5 } }}>
           <Logo />
         </Box>
-        <Typography variant="h6" sx={{ mt: -16 }}>
+        <Typography variant="h6" textAlign="center" sx={{ mt: -16 }}>
           A decentralized private messaging app and a wallet
         </Typography>
 
-        <Stack direction="row" spacing={2} sx={{ mt: 2 }}>
-          <Chip label="Built on Solana" variant="outlined" color="default" />
-          <Chip
-            label="End-to-end Encrypted"
-            variant="outlined"
-            color="default"
-          />
-          <Chip label="Decentralized" variant="outlined" color="default" />
-          <Chip
-            label="Censor-ship Resistant"
-            variant="outlined"
-            color="default"
-          />
-          <Chip label="Emoji NFT" variant="outlined" color="default" />
-        </Stack>
+        <Grid container spacing={1} justifyContent="center" sx={{ mt: 2 }}>
+          <Grid item>
+            <Chip label="Built on Solana" variant="outlined" color="default" />
+          </Grid>{" "}
+          <Grid item>
+            <Chip
+              label="End-to-end Encrypted"
+              variant="outlined"
+              color="default"
+            />
+          </Grid>
+          <Grid item>
+            <Chip label="Decentralized" variant="outlined" color="default" />
+          </Grid>
+          <Grid item>
+            <Chip
+              label="Censor-ship Resistant"
+              variant="outlined"
+              color="default"
+            />
+          </Grid>
+          <Grid item>
+            <Chip label="Emoji NFT" variant="outlined" color="default" />
+          </Grid>
+        </Grid>
 
-        <Stack direction="row" alignItems="center" spacing={2} sx={{ mt: 8 }}>
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          alignItems="center"
+          spacing={2}
+          sx={{ mt: 8 }}
+        >
           <Button
             component="a"
             variant="outlined"
@@ -51,7 +68,14 @@ export default function Home() {
             href="https://twitter.com/gappe_app"
             target="_blank"
             rel="noopener noreferrer"
-            sx={{ textTransform: "none", fontWeight: 700 }}
+            sx={{
+              textTransform: "none",
+              fontWeight: 700,
+              width: {
+                xs: "100%",
+                sm: "auto",
+              },
+            }}
           >
             <Box component={FaTwitter} sx={{ mr: 1 }} /> Follow Progress on
             Twitter
@@ -60,13 +84,21 @@ export default function Home() {
           <Button
             variant="contained"
             disableElevation
-            sx={{ mt: 8, textTransform: "none", fontWeight: 700 }}
+            sx={{
+              mt: 8,
+              textTransform: "none",
+              fontWeight: 700,
+              width: {
+                xs: "100%",
+                sm: "auto",
+              },
+            }}
           >
             <Box component={FaEarlybirds} sx={{ mr: 1 }} />
             Get Early Access
           </Button>
         </Stack>
       </Stack>
-    </>
+    </Container>
   );
 }
