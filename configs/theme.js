@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material";
+import { createTheme, darken, lighten } from "@mui/material";
 
 const fontFamily =
   '"GlacialIndifference", "Roboto", "Helvetica", "Arial", sans-serif';
@@ -12,5 +12,12 @@ export default createTheme({
     h4: { fontFamily },
     h5: { fontFamily },
     h6: { fontFamily },
+  },
+  palette: {
+    primary: {
+      light: lighten("#410ef8", 0.2),
+      main: "#410ef8",
+      dark: darken("#410ef8", 0.2),
+    },
   },
 });
