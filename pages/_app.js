@@ -15,6 +15,11 @@ export default function MyApp({ Component, pageProps }) {
             { url: `https://www.gappe.app${gappe.src}`, alt: "Gappe logo" },
           ],
         }}
+        twitter={{
+          cardType: "app",
+          site: "@gappe_app",
+          handle: "@gappe_app",
+        }}
       />
 
       <Head>
