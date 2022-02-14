@@ -5,20 +5,29 @@ import gappe from "../assets/gappe.png";
 import { NextSeo } from "next-seo";
 
 export default function MyApp({ Component, pageProps }) {
+  const title = "Gappe - Decentralized Private Messaging App";
+  const description =
+    "Gappe is a decentralized private messaging app and a wallet.";
+  const image = `https://www.gappe.app${gappe.src}`;
+  const imageAlt = "Gappe logo";
+
   return (
     <ThemeProvider theme={theme}>
       <NextSeo
-        title="Gappe - Decentralized Private Messaging App"
-        description="Gappe is a decentralized private messaging app and a wallet."
+        title={title}
+        description={description}
         openGraph={{
-          images: [
-            { url: `https://www.gappe.app${gappe.src}`, alt: "Gappe logo" },
-          ],
+          images: [{ url: image, alt: imageAlt }],
         }}
+        additionalMetaTags={[
+          { name: "twitter:title", content: title },
+          { name: "twitter:description", content: description },
+          { name: "twitter:image", content: image },
+          { name: "twitter:image:alt", content: imageAlt },
+        ]}
         twitter={{
-          cardType: "app",
+          cardType: "summary_large_image",
           site: "@gappe_app",
-          handle: "@gappe_app",
         }}
       />
 
