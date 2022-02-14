@@ -1,17 +1,10 @@
 import { NextSeo } from "next-seo";
 import { Box, GlobalStyles } from "@mui/material";
-import gappe from "assets/gappe.png";
 
 export default function EarlyAccess() {
   return (
     <>
-      <NextSeo
-        title="Gappe - Want to get early access?"
-        description="Gappe is a decentralized private messaging app and a wallet."
-        openGraph={{
-          images: [{ url: gappe.src, alt: "Gappe logo" }],
-        }}
-      />
+      <NextSeo title="Gappe - Want to get early access?" />
 
       <GlobalStyles
         styles={`

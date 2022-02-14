@@ -10,21 +10,11 @@ import {
   Typography,
 } from "@mui/material";
 import { FaEarlybirds, FaTwitter } from "react-icons/fa";
-import { NextSeo } from "next-seo";
-import gappe from "assets/gappe.png";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <Container>
-      <NextSeo
-        title="Gappe - Decentralized Private Messaging App"
-        description="Gappe is a decentralized private messaging app and a wallet."
-        openGraph={{
-          images: [{ url: gappe.src, alt: "Gappe logo" }],
-        }}
-      />
-
       <GlobalStyles
         styles={`
           body {
